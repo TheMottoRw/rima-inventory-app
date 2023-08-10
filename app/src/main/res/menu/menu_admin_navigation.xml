@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_cashier"
+        android:icon="@drawable/baseline_supervised_user_circle_24"
+        android:title="@string/cashier" />
+    <item
+        android:id="@+id/action_report"
+        android:icon="@drawable/baseline_file_copy_24"
+        android:title="@string/report" />
+    <item
+        android:id="@+id/action_logout"
+        android:icon="@drawable/baseline_login_24"
+        android:title="@string/logout" />
+</menu>

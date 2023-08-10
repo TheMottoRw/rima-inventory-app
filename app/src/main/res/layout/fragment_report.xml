@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReportFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/products"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                style="@style/edit_text_style"
+                />
+
+            <Spinner
+                android:id="@+id/stockAction"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:entries="@array/stock_action"
+                style="@style/edit_text_style"
+                android:layout_marginLeft="15dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="140dp"
+                android:id="@+id/start"
+                android:hint="@string/from"
+                android:layout_marginTop="20dp"
+                style="@style/edit_text_style"
+                android:inputType="date"
+                android:autofillHints="creditCardExpirationDate"
+                android:drawableStart="@drawable/baseline_date_range_24"
+                android:textSize="14sp"
+                />
+            <EditText
+                android:layout_width="140dp"
+                android:id="@+id/to"
+                android:hint="@string/to"
+                android:layout_marginTop="20dp"
+                style="@style/edit_text_style"
+                android:inputType="date"
+                android:layout_marginLeft="10dp"
+                android:drawableStart="@drawable/baseline_date_range_24"
+                android:autofillHints="creditCardExpirationDate"
+                android:textSize="14sp"
+                />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="65dp"
+                android:text="Go"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:backgroundTint="@color/button_bgcolor"
+                app:cornerRadius="30dp"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginLeft="10dp"
+                />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:scrollbars="vertical"
+    tools:context=".ManageStock">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:visibility="gone">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/stockHeader"
+                style="@style/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/products" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/borders"
+                android:shadowColor="@color/black"
+                android:textColor="@color/white"
+                android:textOff="Stock in"
+                android:textOn="Stock Out"
+
+                />
+
+            <EditText
+                android:id="@+id/product"
+                style="@style/edit_text_style"
+                android:layout_marginTop="30dp"
+                android:enabled="false"
+                android:hint="@string/product_name" />
+
+            <EditText
+                android:id="@+id/quantity"
+                style="@style/edit_text_style"
+                android:layout_marginTop="20dp"
+                android:hint="@string/quantity" />
+
+            <EditText
+                android:id="@+id/pu"
+                style="@style/edit_text_style"
+                android:layout_marginTop="20dp"
+                android:hint="@string/price_per_unit"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/expiration_date"
+                style="@style/edit_text_style"
+                android:layout_marginTop="20dp"
+                android:hint="@string/expiration_date"
+                android:inputType="text" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSave"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/button_bgcolor"
+                android:paddingVertical="15dp"
+                android:text="@string/save"
+                android:textSize="20sp"
+                app:cornerRadius="10dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

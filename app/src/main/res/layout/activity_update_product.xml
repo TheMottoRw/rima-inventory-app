@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateProduct"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    android:padding="20dp"
+    >
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:visibility="gone">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/update_product"
+        style="@style/header"
+        android:gravity="center"
+        android:layout_marginTop="50dp" />
+
+    <EditText
+        android:id="@+id/name"
+        android:hint="@string/product_name"
+        android:layout_marginTop="50dp"
+        style="@style/edit_text_style"/>
+    <EditText
+        android:id="@+id/description"
+        android:hint="@string/description"
+        android:layout_marginTop="30dp"
+        style="@style/edit_text_style"
+        android:minLines="5"
+        android:maxLines="5"
+        android:gravity="top"
+
+        />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSave"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="@string/update"
+        android:layout_marginTop="50dp"
+        android:textSize="20sp"
+        android:backgroundTint="@color/button_bgcolor"
+        app:cornerRadius="10dp"
+        android:layout_gravity="center"
+        android:paddingVertical="15dp"
+        />
+
+</LinearLayout>
